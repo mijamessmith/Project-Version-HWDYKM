@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="../css/home.css"/>
+  <script>
+    var title = <%- JSON.stringify(locals.title) %>
+    var message = <%- JSON.stringify(locals.message) %>
+  </script>
+  <h1>Get Ready</h1>
+
+  <h2>Invite your friends</h2>
+  <h2>
+    title: <%- JSON.stringify(locals.title) %>
+  </h2>
+
+  <div class="innter-form">
+          <label>Enter the email of the person you want quiz against</label>
+          <input id="emailToSearch" type="text" name="email"/>
+            <h5>
+              <%- JSON.stringify(locals.message) %>
+            </h5>
+            <h2>Let's Play</h2>
+            <button id="readyPlay" type="button">I'm ready</button>
+  </div>
+  <script src="./home-script.js"></script>

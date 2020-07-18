@@ -1,0 +1,87 @@
+<h2>It's Time to Pregame</h2>
+<form action="/questionaire" class="needs-validattion" method="post" novalidate>
+	<div class="row">
+	  <label for="q1">Question 1</label>
+	  <p class="questionaire">Where did your parents first meet?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q1" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q2">Question 2</label>
+	  <p class="questionaire">What food did your grandparents make that seemed from a different generation?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q2" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q3">Question 3</label>
+	  <p class="questionaire">What was a sibling's/parents worst habbit when you were a child?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q3" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q4">Question 4</label>
+	  <p class="questionaire">Which member of your family could win a political election?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q4" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q5">Question 5</label>
+	  <p class="questionaire">Where was your favorite place to hang out as a child?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q5" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+	 
+	 <label for="q6">Question 6</label>
+	  <p class="questionaire">What career did you dream about as a kid?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q6" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q7">Question 7</label>
+	  <p class="questionaire">Which band did you once support that now seems embaressing?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q7" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q8">Question 8</label>
+	  <p class="questionaire">Who is your sporting hero?</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q8" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q9">Question 9</label>
+	  <p class="questionaire"></p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q9" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+	  <label for="q10">Question 10</label>
+	  <p class="questionaire">Where did your parents first meet</p>
+	  <input type="text" class="form-control" placeholder="enter answer" name="q10" required>
+	  <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+	  <br/>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+</form>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>

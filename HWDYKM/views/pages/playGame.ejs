@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="/playGame.css">
+  <script>
+    var message = <%- JSON.stringify(locals.message) %>
+  </script>
+  <h1>
+    How well do you know <span id="colorHeader">me</span>
+  </h1>
+  <div id="stripe">
+    <button id="reset">New Game</button>
+    <span id="message"></span>
+  </div>
+  <div class="container">
+    <h5>
+      <%- JSON.stringify(locals.message) %>
+    </h5>
+  </div>
+  <div>
+    <p>
+      Question <span id="questionNumber">1</span>
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="square"><span id="quiz-answer-1" class="q-option">1</span></div>
+    <div class="square"><span id="quiz-answer-2" class="q-option">2</span></div>
+    <div class="square"><span id="quiz-answer-3" class="q-option">3</span></div>
+    <div class="square"><span id="quiz-answer-4" class="q-option">4</span></div>
+  </div>
+
+  <button id="nextQ">Next Question</button>
+
+  <script src="./scripts/quiz-script.js" type="text/javascript"></script>

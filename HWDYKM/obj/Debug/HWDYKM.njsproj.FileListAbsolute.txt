@@ -1,0 +1,3 @@
+C:\Users\mijamessmith\Desktop\michaelCode\Projects\how-well-do-you-know-me\Alpha1.1-project\HWDYKM\obj\Debug\HWDYKM.njsprojAssemblyReference.cache
+C:\Users\mijamessmith\Desktop\michaelCode\Projects\how-well-do-you-know-me\Alpha1.1-project\HWDYKM\obj\Debug\HWDYKM.njsproj.CoreCompileInputs.cache
+C:\Users\mijamessmith\Desktop\michaelCode\Projects\how-well-do-you-know-me\Alpha1.1-project\HWDYKM\bin\Microsoft.NodejsTools.WebRole.dll

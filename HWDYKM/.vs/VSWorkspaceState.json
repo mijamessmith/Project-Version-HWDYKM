@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\js",
+    "\\js\\config",
+    "\\js\\controller",
+    "\\js\\routes",
+    "\\views",
+    "\\views\\css",
+    "\\views\\pages",
+    "\\views\\partials"
+  ],
+  "SelectedNode": "\\js\\routes\\login.js",
+  "PreviewInSolutionExplorer": false
+}
