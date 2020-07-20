@@ -26,12 +26,11 @@ router.get("/getPerson", (req, res) => {
     return db.pool.query(`SELECT userId FROM user_data WHERE email = "${req.query.email}"`, (err, result) => {
         if (err) throw err;
         if (result.length > 0) {
-           var targetPerson = result[0].userId;
+            var targetPerson = result[0].userId;
             req.session.targetPerson = targetPerson;
-            res.render("pages/playGame", { message: "Starting Game" });
-            res.end();
+            res.send("/playGame"); //send a string to script that dictates a change in url
         } else
-            res.render("pages/home", { message: "Not a registered email" })
+            res.send("Not a registered email");
     })
 })
 

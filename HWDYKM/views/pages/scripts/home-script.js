@@ -12,11 +12,11 @@ readyPlay.addEventListener("click", function (event) {
         datatype: "json",
         data: "" //we're not sending
     });
+
     ajaxReq.done(function (data) {
         //change car color in front end with the data
-        if (data) {
-            console.log(data)
-            return;
+        if (data == "/playGame") {
+            window.location.replace(`http://localhost:1337${data}`); //sending a new addresss to load
         }
     });
 });
