@@ -28,7 +28,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".env" />
+    <Content Include=".gitignore" />
     <Content Include="app.js" />
+    <Content Include="js\config\passport-config.js" />
     <Content Include="js\config\settings.js" />
     <Content Include="js\controller\db.js" />
     <Content Include="js\controller\dbFunctions.js" />

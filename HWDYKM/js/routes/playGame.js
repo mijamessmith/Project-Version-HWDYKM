@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require("../controller/db")
 
 router.get("/playGame", (req, res, next) => {
-    req.session.targetPerson = 3//delete me later
     res.render("pages/playGame", { message: "Got the answers" })
 
 

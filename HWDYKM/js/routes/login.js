@@ -1,8 +1,54 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../controller/db")
+const db = require("../controller/db");
+const bcrypt = require("bcrypt")
+const passport = require("passport");
+const initializePassport = require("../config/passport-config");
 
-var currentUser = {};
+//Authentication Middleware Functions
+function checkAuthenticated(req, res, next) { //middleware function
+    if (req.isAuthenticated()) {
+        return next()
+    }
+    res.redirect("/login"); //if not logged in, redirect to login
+}
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        res.redirect("/")
+    }
+    return next();
+}
+
+//getting users by email and userId
+
+function getUserByEmail(email) {
+    db.pool.query(`SELECT * FROM user_data WHERE email = "${email}"`, (error, result) => {
+        if (error) {
+            console.log(error)
+        } else if (result.length > 0) {
+            return true;
+        }
+    })
+}
+
+function getUserByID(id) {
+    db.pool.query(`SELECT * FROM user_data WHERE userId = "${id}"`, (error, result) => {
+        if (error) {
+            console.log(error)
+        } else if (result.length > 0) {
+            return result;
+        }
+    })
+}
+
+
+//Passport
+
+//initializePassport(passport, getUserByEmail, getUserById) 
+
+
+//login routes
 
 router.get("/login", (req, res, next) => {
     var message = req.message;
@@ -39,8 +85,13 @@ router.post("/logUserIn", async (req, res, next) => {
         }
 })
 
-router.post("/register", (req, res, next) => {
-    console.log(`at least this works in /register`)
+
+//Register Routes
+
+router.post("/register", async (req, res, next) => {
+
+    //const hashedPassword = await bcrypt.hash(req.body.password, 10); 
+    console.log(hashedPassword);
     //first check that the email doesn't exist by selecting it from the db
     db.pool.query(`SELECT email FROM user_data WHERE email = "${req.body.email}"`, (error, result) => {
         console.log(`Here are the results ${result}`);
@@ -68,8 +119,6 @@ router.post("/register", (req, res, next) => {
 })
 
 module.exports = router;
-
-
 
 
 //examples
